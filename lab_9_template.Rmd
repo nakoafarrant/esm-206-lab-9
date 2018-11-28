@@ -1,6 +1,6 @@
 ---
 title: "Lab 9 - Multiple Linear Regression"
-author: "Allison"
+author: "Nakoa"
 output:
   html_document: default
 ---
@@ -40,11 +40,12 @@ library(stargazer)
 ```{r get_data, include = FALSE}
 
 # a. Read in data as 'homes':
-
+homes <- read_csv("slo_homes.csv")
 
 # b. Filter to only include cities "San Luis Obispo", "Santa Maria-Orcutt", "Atascadero", and "Arroyo Grande", and call this new subset 'homes_sub':
 
-
+homes_sub <- homes %>%
+  filter(City == "San Luis Obispo" | City == "Santa Maria-Orcutt" | City == "Atascadero" | City == "Arroyo Grande")
 
 ```
 
